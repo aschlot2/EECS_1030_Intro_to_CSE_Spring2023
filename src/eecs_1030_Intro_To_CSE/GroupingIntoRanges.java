@@ -59,7 +59,7 @@ public class GroupingIntoRanges {
 					endCh++;                                                  // Increment endCh to get the actual chapter number
 					if ((endCh - startCh) >= run) {                           // Checks if there is a run of 3 or more chapters
 						System.out.print(startCh + "-" + endCh + " ");        // If true, outputs the run in the proper format
-						i = j;                                                // Adds 1 to "i" so the last chapter in the run isn't repeated
+						i = j;                                                // Makes "i" equal to "j" so the last chapter in the run isn't repeated
 					}
 					else {
 						System.out.print(startCh + " ");                      // Outputs the chapter's number followed by a space
