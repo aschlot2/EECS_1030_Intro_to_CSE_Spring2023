@@ -52,13 +52,6 @@ public class GroupingIntoRanges {
 					while ( (j < chapterSelect.length)                        // Checks if j is less than the number of chapters
 							&& (chapterSelect[j] == 1) ) {                    // Checks if the chapter at index "j" is selected
 						endCh = j;                                            // If both true: Sets the end of the chapter run
-						i = j - 1;                                            //               Moves "i" to the same index as "j - 1" because it's
-						                                                      //                  the preceding index of the last chapter in the
-						                                                      //                  run and "i++" will still increment it
-						                                                      //                Also needs to be "j - 1" so if the run is not of
-						                                                      //                  three chapters or more the else print statement
-						                                                      //                  below functions correctly
-						
 						j++;                                                  //               Increments "j" for the while loop
 					}
 					
@@ -66,7 +59,7 @@ public class GroupingIntoRanges {
 					endCh++;                                                  // Increment endCh to get the actual chapter number
 					if ((endCh - startCh) >= run) {                           // Checks if there is a run of 3 or more chapters
 						System.out.print(startCh + "-" + endCh + " ");        // If true, outputs the run in the proper format
-						i += 1;                                               // Adds 1 to "i" so the last chapter in the run isn't repeated
+						i = j;                                                // Adds 1 to "i" so the last chapter in the run isn't repeated
 					}
 					else {
 						System.out.print(startCh + " ");                      // Outputs the chapter's number followed by a space
